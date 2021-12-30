@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ramya Learnings - Images and Texture Setup</title>>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+       <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="2" position="0 5 -9" segments-height="84">
+   </a-sphere> 
+      <!--Box-->
+      <a-box src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
+             width ="4"
+             height="4"
+             depth="4"
+             position="-2 1 -9"
+             segments-height="84">
+      </a-box>
+       <!--Box-->
+      <a-box color ="#FFFF00"
+             width ="4"
+             height="4"
+             depth="4"
+             position="2 1 -9">
+      </a-box>
+
+         <!--Sky | background color-->
+        <a-sky color="#C9F6FF">
+        </a-sky>
+        
+    </a-scene>
+  </body>
+</html>
