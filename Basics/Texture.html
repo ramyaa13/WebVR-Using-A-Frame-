@@ -6,10 +6,16 @@
   </head>
   <body>
     <a-scene>
-       <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="2" position="0 5 -9" segments-height="84">
-   </a-sphere> 
+
+      <a-assets>
+        <img id="globe" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" crossorigin="anonymous">
+      </a-assets>
+
+       <a-sphere src="#globe" radius="2" position="0 5 -9" segments-height="84">
+      </a-sphere> 
+
       <!--Box-->
-      <a-box src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
+      <a-box src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tex-2.jpg"
              width ="4"
              height="4"
              depth="4"
@@ -17,7 +23,8 @@
              segments-height="84">
       </a-box>
        <!--Box-->
-      <a-box color ="#FFFF00"
+      <a-box src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tex-1.jpg"
+             repeat = "1 1"
              width ="4"
              height="4"
              depth="4"
