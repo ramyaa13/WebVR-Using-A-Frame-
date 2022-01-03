@@ -13,9 +13,11 @@
 
         <img id="Sky" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Panaroma.jpg" crossorigin="anonymous">
 
-         <img id="Envi" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Skyy1.jpg" crossorigin="anonymous">
+         <img id="Envi" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/ClearSky.jpg" crossorigin="anonymous">
+
+          <img id="Dark" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Saturn%20(1).jpg" crossorigin="anonymous">
       </a-assets>
-       
+       <!--Creating Ground Plane-->
        <a-plane material="color: #FFFFFF;
                           src: #Ground;
                           repeat: 5000 5000"
@@ -23,8 +25,8 @@
                 scale="1000 1000 1">
         </a-plane>
 
-   <!--Sky | background color-->
-   <a-sky src="#Envi"
+   <!--Sky | Environment-->
+   <a-sky src="#Dark"
           rotation="0 90 0">
    </a-sky>
         
