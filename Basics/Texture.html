@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ramya Learnings - Images and Texture Setup</title>>
+    <title>Ramya Learnings - Materials Texture Setup</title>>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
@@ -9,26 +9,72 @@
 
       <a-assets>
         <img id="globe" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" crossorigin="anonymous">
-      </a-assets>
 
-       <a-sphere src="#globe" radius="2" position="0 5 -9" segments-height="84">
+        <img id="box-1" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tex-2.jpg" crossorigin="anonymous">
+
+        <img id="box-2" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tree/WeatheredWood_S.jpg" crossorigin="anonymous">
+
+        <img id="box-2-norm" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tree/WeatheredWood_N.jpg" crossorigin="anonymous">
+      </a-assets>
+       
+       <!--Earth Sphere-->
+       <a-sphere src="#globe" radius="2.5" position="0 5 -9" segments-height="84">
       </a-sphere> 
 
+      <!--Green Sphere with Standard Shader Material-->
+      <a-sphere material="color: #008000;
+                          roughness: 0.2;
+                          shader: standard"
+                radius="1.5"
+                position= "-5 5 -9">
+      </a-sphere>
+
+      <!--Red Sphere with Flat Shader Material-->
+      <a-sphere material="color: #AA0000;
+                          roughness: 0.2;
+                          shader: flat;
+                          opacity: 0.5"
+                radius="1.5"
+                position= "5 5 -9">
+      </a-sphere>
+
       <!--Box-->
-      <a-box src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tex-2.jpg"
+      <a-box src="#box-1"
              width ="4"
              height="4"
              depth="4"
              position="-2 1 -9"
-             segments-height="84">
+             segments-height="84"
+             scale="1 1 -1">
       </a-box>
-       <!--Box-->
-      <a-box src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Tex-1.jpg"
+
+       <!--Box with texture and normal map-->
+      <a-box src="#box-2"
              repeat = "1 1"
+             normal-map="#box-2-norm"
+             normal-texture-repeat="1 1"
+             normal-scale="1 -1"
+             roughness="0.2"
              width ="4"
              height="4"
              depth="4"
-             position="2 1 -9">
+             position="2 1 -9"
+             scale="-1 1 1">
+      </a-box>
+
+ <!--Box with texture and normal map by using Material-->
+      <a-box material="color: #FFFFFF;
+                       src: #box-2;
+                       repeat: 2 2;
+                       normal-map: #box-2-norm;
+                       normal-texture-repeat: 2 2;
+                       normal-scale: 1 -1;
+                       roughness: 0.9"
+             width ="4"
+             height="4"
+             depth="4"
+             position="-6 1 -9"
+             scale="-1 1 1">
       </a-box>
 
          <!--Sky | background color-->
