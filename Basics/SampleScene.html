@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ramya Learnings - Images and Curved Images</title>>
+    <title>Ramya Learnings - Scene </title>>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
@@ -9,16 +9,23 @@
 
       <!--Asset Management-->
       <a-assets>
-        <img id="Ground" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/CurvedImg/1139033.jpg" crossorigin="anonymous">
+        <img id="Ground" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Ground.jpg" crossorigin="anonymous">
 
-        <img id="Sky" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/CurvedImg/abstract-blue-wavy-business-style-background_1017-33408.jpg" crossorigin="anonymous">
+        <img id="Sky" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Panaroma.jpg" crossorigin="anonymous">
 
          <img id="Envi" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/CurvedImg/abstract-blue-wavy-business-style-background_1017-33408.jpg" crossorigin="anonymous">
       </a-assets>
        
-  
+       <a-plane material="color: #FFFFFF;
+                          src: #Ground;
+                          repeat: 5000 5000"
+                rotation="-90 0 0"
+                scale="1000 1000 1">
+        </a-plane>
+
    <!--Sky | background color-->
-   <a-sky color="#808080">
+   <a-sky src="#Sky"
+          rotation="0 90 0">
    </a-sky>
         
     </a-scene>
