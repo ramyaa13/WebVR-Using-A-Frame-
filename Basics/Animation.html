@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ramya Learnings - Scene </title>>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!--Asset Management-->
+      <a-assets>
+         <img id="globe" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" crossorigin="anonymous">
+
+         <img id="Envi" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/ClearSky.jpg" crossorigin="anonymous">
+
+          <img id="Dark" src="https://raw.githubusercontent.com/ramyaa13/WebVR-Using-A-Frame-/main/Basics/Img/Scene/Saturn%20(1).jpg" crossorigin="anonymous">
+      </a-assets>
+        
+      <!--Earth Sphere | ROTATION-->
+      <a-sphere src="#globe" radius="2.5" position="0 5 -9" segments-height="84"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+      </a-sphere> 
+
+       <!--Moon Sphere | orbiting and revolving | ROTATION-->
+      <a-entity position="0 5 -9" animation="property: rotation; to: 0 -360 0; loop: true; dur: 10000">
+      <a-sphere color="#AA8080"
+            position="5 0 0"
+            animation="property: rotation; to: 0 -360 0; loop: true; dur: 10000">
+      </a-sphere>
+    </a-entity>
+
+    <!--Yellow Cube | TRANSLATION-->
+    <a-box color="#FFFF00" position="-5 0.5 0"
+    animation="property: position; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: -5 1 -10">
+      </a-box>  
+
+    <!--GreenCube | SCALE-->
+      <a-box color="#00FF00" position="5 0.5 0"
+      animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1 5 5">
+      </a-box> 
+     
+     <!--Cylinder | MATERIAL COLOR CHANGE-->
+     <a-cylinder color="#F55" radius="0.5" position="0 0.5 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #5F5">
+                         </a-cylinder>
+
+
+                          <a-entity geometry="primitive: box" material="color: white" position="2.5 0.5 0"
+              animation__color="property: material.color; dir: alternate; dur: 1000;
+                                easing: easeInSine; loop: true; to: #FFF">
+    </a-entity>
+
+      <!--Multiple Animations in Cylinder -->
+       <a-cylinder color="#F55" radius="0.1" position="2 0.5 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #5F5"
+                animation__scale="property: scale; dir: alternate; dur: 200;
+                           easing: easeInSine; loop: true; to: 1.2 1 1.2"
+                animation__yoyo="property: position; dir: alternate; dur: 1000;
+                                 easing: easeInSine; loop: true; to: 0 2 0">
+    </a-cylinder>
+
+   <!--Sky | Environment-->
+   <a-sky src="#Dark"
+          rotation="0 90 0">
+   </a-sky>
+
+   <!--Creating Ground Plane-->
+       <a-plane material="color: #000000;
+                          src: #Ground;
+                          repeat: 5000 5000"
+                rotation="-90 0 0"
+                scale="1000 1000 1">
+        </a-plane>
+
+   <!--Camera-->
+    <a-entity position="0 0 8">
+    <a-camera></a-camera>
+   </a-entity>
+        
+    </a-scene>
+  </body>
+</html>
