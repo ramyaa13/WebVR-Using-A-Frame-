@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ramya's Creation - 01 </title>>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+    <a-cylinder color="#FF0000"
+            position="-15 15 -8"
+            animation="property: position; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: -15 -9 -8"
+            animation__color="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #FFE000">
+    </a-cylinder>
+    
+    <a-box color="#311900"
+            position="-20 -9 -8" height = "2" width="2"
+            animation="property: position; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: -20 15 -8"
+            animation__color="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #0C0366"
+            animation__scale="property: scale; dir: alternate; dur: 200;
+                           easing: easeInSine; loop: true; to: 1 1 1">
+    </a-box>
+
+     <a-cylinder color="#F300FF" radius="2" position="-25 15 -8" rotation="0 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #861400"
+               animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1 45 1">
+                         </a-cylinder>
+
+    <a-box color="#4C004A"
+            position="15 -9 -8" height = "2" width="2"
+            animation="property: position; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 15 15 -8"
+            animation__color="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #264C00"
+            animation__scale="property: scale; dir: alternate; dur: 200;
+                           easing: easeInSine; loop: true; to: 1 1 1">
+    </a-box>
+
+    <a-cylinder color="#FFE000"
+            position="20 15 -8"
+            animation="property: position; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 20 -9 -8"
+            animation__color="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #FF0000">
+    </a-cylinder>
+    
+
+    <a-cylinder color="#F300FF" radius="2" position="25 -8 -8" rotation="0 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #861400"
+               animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1 45 1">
+                         </a-cylinder>
+
+
+<!--DOWN BOX-->
+
+ <!--Thick Blue to Brown-->
+
+     <a-box color="#311900" height = "2" width="2"
+            position="-20 -9 -8"
+            animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #0C0366"
+            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 20 1 1">
+    </a-box>
+<!--Green to Violet-->
+     <a-box color="#4C004A" height = "2" width="2"
+            position="20 15 -8"
+            animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #264C00"
+            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 20 1 1">
+    </a-box>
+
+<!--MID BOX-->
+ <!--Green to Violet-->
+ <a-box color="#264C00" height = "2" width="2"
+            position="-20 0 -10"
+            animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #4C004A"
+            animation__scale="property: scale; dir: alternate; dur: 1500;
+                           easing: linear; loop: true; to: 20 1 1">
+    </a-box>
+
+    <!--Thick Blue to Brown-->
+
+     <a-box color="#0C0366" height = "2" width="2"
+            position="20 0 -10"
+            animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #311900"
+            animation__scale="property: scale; dir: alternate; dur: 1500;
+                           easing: linear; loop: true; to: 20 1 1">
+    </a-box>
+
+
+
+
+    <!--Cylinder | MATERIAL COLOR CHANGE violet to brown-->
+     <a-cylinder color="#F300FF" radius="4" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #861400"
+               animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+     <!--Cylinder | MATERIAL COLOR CHANGE red to blue-->
+     <a-cylinder color="#C20E0E" radius="3" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #470EC2"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+                          <!--Cylinder | MATERIAL COLOR CHANGE brown to green-->
+     <a-cylinder color="#AD5E00" radius="2.5" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #00AD4C"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+       <!--Cylinder | MATERIAL COLOR CHANGE thich blue to yellow-->
+     <a-cylinder color="#FF9B00" radius="2" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #FFF113"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+                          <!--Cylinder | MATERIAL COLOR CHANGE orange to sky blue-->
+     <a-cylinder color="#1A0086" radius="1.5" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #00ECFF"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+         <!--Cylinder | MATERIAL COLOR CHANGE light green to pink-->
+     <a-cylinder color="#42FF00" radius="1" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #FF008B"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+            <!--Cylinder | MATERIAL COLOR CHANGE black to white -->
+     <a-cylinder color="#008819" radius="0.5" position="0 2 0" rotation="90 0 0"
+                animation="property: color; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: #FFFFFF"
+                            animation__scale="property: scale; dir: alternate; dur: 1000;
+                           easing: easeInSine; loop: true; to: 1.5 1.5 1.5">
+                         </a-cylinder>
+
+
+
+
+   <!--Sky | Environment-->
+   <a-sky color="#F55"
+                animation="property: color; dir: alternate; dur: 2000;
+                           easing: easeInSine; loop: true; to: #5F5">
+   </a-sky>
+
+    <!--Creating Ground Plane
+       <a-plane material="color: #000000;
+                          src: #Ground;
+                          repeat: 5000 5000"
+                rotation="-90 0 0"
+                scale="1000 1000 1">
+        </a-plane> -->
+
+   <!--Camera-->
+    <a-entity position="0 0 8">
+    <a-camera></a-camera>
+   </a-entity>
+        
+    </a-scene>
+  </body>
+</html>
